@@ -18,6 +18,8 @@ import nvidiaLogo from './assets/images/nvidia.png'
 import intelLogo from './assets/images/intel.svg'
 import amdLogo from './assets/images/amd.png'
 import acerLogo from './assets/images/acer.jpg'
+import menuLogo from './assets/icons/icon-menu.svg'
+import monitor from './assets/icons/monitor.svg'
 
 const searchSuggestions = ["MSI", "Lenovo", "Asus", "Microsoft", "LG"];
 
@@ -113,8 +115,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Navigation */}
-      <div className="bg-[#1B135C] text-white p-4">
-        <div className="flex items-center justify-between max-w-4xl mx-auto gap-4">
+      <div className="bg-[#1B135C] text-white p-4 relative">
+      <img src={menuLogo} alt="JBL Logo" className="w-10 h-10 absolute left-4 top-[25px]" />
+
+        <div className="flex items-center justify-between max-w-4xl mx-auto gap-4 ">
+
           <div className="flex items-center space-x-4 w-full">
             <div className="text-2xl font-bold">
               <img src={jibLogo} alt="JBL Logo" className="w-15 h-14" />
@@ -185,14 +190,16 @@ export default function App() {
                   </div>
                   <div className="flex flex-col">
                     <div className="flex items-center space-x-3 p-2 rounded cursor-pointer">
-                    <Monitor className="w-4 h-4 text-[#4437C5]" />
+                    <img src={monitor} alt="JBL Logo" className="w-4 h-4" />
+                    {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
                       <div className="flex gap-1 font-semibold  ">
                         <span className="text-[#4437C5]">Notebook</span>
                         <span className="text-gray-700">ทั้งหมด</span>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 px-2 py-1 rounded cursor-pointer">
-                    <Monitor className="w-4 h-4 text-[#4437C5]" />
+                    <img src={monitor} alt="JBL Logo" className="w-4 h-4" />
+                    {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
                       <div className="flex gap-1 font-semibold  ">
                         <span className="text-[#4437C5]">Notebook</span>
                         <span className="text-gray-700">ทั้งหมด</span>
@@ -207,7 +214,7 @@ export default function App() {
                   </div>
                   <div className="flex space-x-2">
                     <span className="bg-[#1B135C] text-white px-3 py-1 rounded-full text-sm w-[100px] text-center">
-                      คุ้นที่สุด
+                      คุ้มที่สุด
                     </span>
                     <span className="bg-blue-100 text-[#1B135C] px-3 py-1 rounded-full text-sm w-[100px] text-center">
                       เป็นที่นิยม
