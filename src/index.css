@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Keep track subtly visible */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* Make thumb transparent by default */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Show thumb with a visible color on hover */
+}
