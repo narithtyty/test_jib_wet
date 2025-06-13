@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
