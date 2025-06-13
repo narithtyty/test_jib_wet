@@ -8,32 +8,30 @@
   }
 }
 
-/* Custom scrollbar styles */
 ::-webkit-scrollbar {
-  width: 8px; /* Scrollbar width */
-  height: 8px; /* Height of the scrollbar for horizontal scroll */
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Make track transparent to blend with content */
+  background: transparent;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1); /* Semi-transparent thumb that overlays content */
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for visibility */
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3); /* More visible on hover */
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* Make sure scrollbar appears over content */
 html {
-  overflow-y: overlay; /* Use overlay scrolling where supported */
+  overflow-y: overlay;
 }
 
 body {
-  scrollbar-gutter: stable; /* Prevent layout shift when scrollbar appears */
+  scrollbar-gutter: stable;
 }

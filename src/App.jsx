@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  CircleUserRound,
-  ShoppingCart,
-  Heart,
-  Search,
-  AlignLeft,
-  Monitor,
-  ArrowUpLeft,
-} from "lucide-react";
+import { ArrowUpLeft } from "lucide-react";
 import jibLogo from "./assets/icons/logo-w.png";
 import noteBook from "./assets/images/note_book.png";
 import lenovoLogo from "./assets/images/p_lenovo.png";
@@ -148,7 +140,7 @@ export default function App() {
           className="w-10 h-10 absolute left-4 top-[25px]"
         />
 
-        <div className="flex items-center justify-between max-w-7xl mx-auto gap-4 ">
+        <div className="flex items-center justify-between max-w-6xl mx-auto gap-6 ">
           <div className="flex items-center space-x-4 w-full">
             <div className="text-2xl font-bold">
               <img src={jibLogo} alt="JBL Logo" className="w-15 h-14" />
@@ -182,14 +174,16 @@ export default function App() {
                   }}
                   placeholder="ค้นหาสินค้า..."
                 />
-                <span className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-[#868CFF]">AI Search </span>
+                <span className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-[#868CFF]">
+                  AI Search{" "}
+                </span>
                 <button className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10">
                   <img src={searchBlue} alt="search" className="w-6 h-6" />
                 </button>
               </div>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             <div className="relative">
               <img src={heart} alt="heart" className="w-10 h-10" />
               <span className="absolute top-5 -right-2 bg-[#FDAF17] text-white text-[10px] rounded-full px-[5px] flex items-center justify-center">
@@ -204,7 +198,6 @@ export default function App() {
             </div>
             <img src={profile} alt="profile" className="w-8 h-8" />
 
-            {/* <Search className="w-6 h-6 text-white" /> */}
           </div>
         </div>
       </div>
@@ -282,10 +275,6 @@ export default function App() {
                       เป็นที่นิยม
                     </span>
                   </div>
-                  {/* <div className="flex space-x-2">
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded text-sm">ทั้งหมด</button>
-                    <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm">คอมพิวเตอร์</button>
-                  </div> */}
                 </div>
 
                 {/* Product Grid */}
@@ -297,11 +286,6 @@ export default function App() {
                         whileHover={{ scale: 1.05 }}
                         className="bg-white border rounded-lg p-3 cursor-pointer relative flex-shrink-0 w-48"
                       >
-                        {/* {product.badge && (
-                          <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                            {product.badge}
-                          </span>
-                        )} */}
                         <img
                           src={badgeAsus}
                           alt="badge"
@@ -318,9 +302,6 @@ export default function App() {
                           <span className="text-[#291ABD] ">NOTEBOOK</span>{" "}
                           <span className="text-[#646464]">{product.name}</span>
                         </div>
-                        {/* <div className="text-xs text-gray-600 mb-2">
-                          {product.name}
-                        </div> */}
                         <div className="flex justify-between items-end font-semibold">
                           <img src={discount} alt="discount" className="" />
                           <span className="text-[#454545] text-[16px]">
