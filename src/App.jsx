@@ -64,14 +64,14 @@ const products = [
     id: 5,
     name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
-      fullPrice: "฿ 49,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 6,
     name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
-      fullPrice: "฿ 49,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
@@ -135,29 +135,40 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Navigation */}
-      <div className="bg-[#1B135C] text-white p-4 relative">
+      <div
+        className="bg-[#1B135C] text-white p-4 relative"
+        style={{
+          background: "linear-gradient(90deg, #221692 19.58%, #1A1354 100%)",
+          backdropFilter: "blur(10px)",
+        }}
+      >
         <img
           src={menuLogo}
           alt="JBL Logo"
           className="w-10 h-10 absolute left-4 top-[25px]"
         />
 
-        <div className="flex items-center justify-between max-w-4xl mx-auto gap-4 ">
+        <div className="flex items-center justify-between max-w-7xl mx-auto gap-4 ">
           <div className="flex items-center space-x-4 w-full">
             <div className="text-2xl font-bold">
               <img src={jibLogo} alt="JBL Logo" className="w-15 h-14" />
             </div>
             <div className="relative flex-1 ">
-              <div 
+              <div
                 className="relative"
                 style={{
-                  background: 'linear-gradient(90deg, #8B52DB, #FFFFFF, #972997)',
-                  borderRadius: '99px',
-                  padding: '2px',
-                  boxShadow: '0px 0px 7px 0px #E3B0FF'
+                  background:
+                    "linear-gradient(90deg, #8B52DB, #FFFFFF, #972997)",
+                  borderRadius: "99px",
+                  padding: "2px",
+                  boxShadow: "0px 0px 7px 0px #E3B0FF",
                 }}
               >
-                <img src={iconAI} alt="ai" className="w-6 h-6 absolute left-4 top-1/2 transform -translate-y-1/2 z-10" />
+                <img
+                  src={iconAI}
+                  alt="ai"
+                  className="w-6 h-6 absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
+                />
                 <input
                   type="text"
                   value={searchQuery}
@@ -166,11 +177,12 @@ export default function App() {
                   onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
                   className="w-full px-[40px] py-2 rounded-full text-black border-0 outline-none"
                   style={{
-                    background: '#F2F3FF',
-                    borderRadius: '99px'
+                    background: "#F2F3FF",
+                    borderRadius: "99px",
                   }}
                   placeholder="ค้นหาสินค้า..."
                 />
+                <span className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-[#868CFF]">AI Search </span>
                 <button className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10">
                   <img src={searchBlue} alt="search" className="w-6 h-6" />
                 </button>
@@ -237,7 +249,7 @@ export default function App() {
                   </div>
                   <div className="flex flex-col">
                     <div className="flex items-center space-x-3 p-2 rounded cursor-pointer">
-                      <img src={monitor} alt="JBL Logo" className="w-4 h-4" />
+                      <img src={monitor} alt="JBL Logo" className="w-5 h-5" />
                       {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
                       <div className="flex gap-1 font-semibold text-[14px] ">
                         <span className="text-[#291ABD]">Notebook</span>
@@ -245,7 +257,7 @@ export default function App() {
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 px-2 py-1 rounded cursor-pointer">
-                      <img src={monitor} alt="JBL Logo" className="w-4 h-4" />
+                      <img src={monitor} alt="JBL Logo" className="w-5 h-5" />
                       {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
                       <div className="flex gap-1 font-semibold  text-[14px]">
                         <span className="text-[#291ABD]">Notebook</span>
@@ -303,9 +315,7 @@ export default function App() {
                           />
                         </div>
                         <div className=" mb-2 text-[12px] font-semibold">
-                          <span className="text-[#291ABD] ">
-                            NOTEBOOK
-                          </span>{" "}
+                          <span className="text-[#291ABD] ">NOTEBOOK</span>{" "}
                           <span className="text-[#646464]">{product.name}</span>
                         </div>
                         {/* <div className="text-xs text-gray-600 mb-2">
@@ -313,7 +323,9 @@ export default function App() {
                         </div> */}
                         <div className="flex justify-between items-end font-semibold">
                           <img src={discount} alt="discount" className="" />
-                          <span className="text-[#454545] text-[16px]">{product.price}</span>
+                          <span className="text-[#454545] text-[16px]">
+                            {product.price}
+                          </span>
                         </div>
                       </motion.div>
                     ))}

@@ -6,92 +6,114 @@ import {
   Heart,
   Search,
   AlignLeft,
-  Monitor ,
-  ArrowUpLeft 
+  Monitor,
+  ArrowUpLeft,
 } from "lucide-react";
 import jibLogo from "./assets/icons/logo-w.png";
 import noteBook from "./assets/images/note_book.png";
-import lenovoLogo from './assets/images/lenovo.png'
-import asusLogo from './assets/images/asus.png'
-import msiLogo from './assets/images/msi.png'
-import nvidiaLogo from './assets/images/nvidia.png'
-import intelLogo from './assets/images/intel.svg'
-import amdLogo from './assets/images/amd.png'
-import acerLogo from './assets/images/acer.jpg'
+import lenovoLogo from "./assets/images/p_lenovo.png";
+import asusLogo from "./assets/images/p_asus.png";
+import msiLogo from "./assets/images/p_msi.png";
+import nvidiaLogo from "./assets/images/p_nvidia.png";
+import intelLogo from "./assets/images/p_intel.png";
+import amdLogo from "./assets/images/p_amd.png";
+import ipLogo from "./assets/images/p_ip.png";
+import menuLogo from "./assets/icons/icon-menu.svg";
+import monitor from "./assets/icons/monitor.svg";
+import badgeAsus from "./assets/images/badge_asus.png";
+import searchGray from "./assets/icons/search-gray.svg";
+import iconAI from "./assets/icons/iconAI.svg";
+import discount from "./assets/icons/dis-tag.svg";
+import shoppingCart from "./assets/icons/shop-cart.svg";
+import heart from "./assets/icons/heart.svg";
+import profile from "./assets/icons/profile.svg";
+import searchBlue from "./assets/icons/search-blue.svg";
 
 const searchSuggestions = ["MSI", "Lenovo", "Asus", "Microsoft", "LG"];
 
 const products = [
   {
     id: 1,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 2,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 3,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 4,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 5,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 6,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS ROG STRIX G17 G713RC-HX070W (ECLIPSE GRAY)",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 36,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 7,
-    name: "NOTEBOOK โน๊ตบุ๊ค MSI Gaming GF63 Thin 11UC-692TH",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 32,900",
+    fullPrice: "฿ 49,900",
     badge: "NEW",
   },
   {
     id: 8,
-    name: "NOTEBOOK โน๊ตบุ๊ค Lenovo IdeaPad Gaming 3 15ACH6",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 28,900",
+    fullPrice: "฿ 49,900",
     badge: "SALE",
   },
   {
     id: 9,
-    name: "NOTEBOOK โน๊ตบุ๊ค HP Pavilion Gaming 15-dk2000TX",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 34,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 10,
-    name: "NOTEBOOK โน๊ตบุ๊ค Acer Nitro 5 AN515-57-74NU",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 31,900",
+    fullPrice: "฿ 49,900",
     badge: "NEW",
   },
   {
     id: 11,
-    name: "NOTEBOOK โน๊ตบุ๊ค Dell G15 5515 Gaming Laptop",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 35,900",
+    fullPrice: "฿ 49,900",
     badge: "HOT",
   },
   {
     id: 12,
-    name: "NOTEBOOK โน๊ตบุ๊ค ASUS TUF Gaming F15 FX506HF",
+    name: "(โน้ตบุ๊ค) ASUS ROG STRIX G17 G713RC-HX032W (ECLIPSE GRAY)",
     price: "฿ 29,900",
+    fullPrice: "฿ 49,900",
     badge: "SALE",
   },
 ];
@@ -103,7 +125,7 @@ const brands = [
   { name: "NVIDIA", logo: nvidiaLogo },
   { name: "Intel", logo: intelLogo },
   { name: "AMD", logo: amdLogo },
-  { name: "Acer", logo: acerLogo },
+  { name: "Ip", logo: ipLogo },
 ];
 
 export default function App() {
@@ -113,37 +135,74 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Navigation */}
-      <div className="bg-[#1B135C] text-white p-4">
-        <div className="flex items-center justify-between max-w-4xl mx-auto gap-4">
+      <div
+        className="bg-[#1B135C] text-white p-4 relative"
+        style={{
+          background: "linear-gradient(90deg, #221692 19.58%, #1A1354 100%)",
+          backdropFilter: "blur(10px)",
+        }}
+      >
+        <img
+          src={menuLogo}
+          alt="JBL Logo"
+          className="w-10 h-10 absolute left-4 top-[25px]"
+        />
+
+        <div className="flex items-center justify-between max-w-7xl mx-auto gap-6 ">
           <div className="flex items-center space-x-4 w-full">
             <div className="text-2xl font-bold">
               <img src={jibLogo} alt="JBL Logo" className="w-15 h-14" />
             </div>
             <div className="relative flex-1 ">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => setShowDropdown(true)}
-                onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
-                className="w-full px-4 py-2 rounded-full text-black"
-                placeholder="ค้นหาสินค้า..."
-              />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                <Search className="w-6 h-6 text-gray-500" />
-              </button>
+              <div
+                className="relative"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #8B52DB, #FFFFFF, #972997)",
+                  borderRadius: "99px",
+                  padding: "2px",
+                  boxShadow: "0px 0px 7px 0px #E3B0FF",
+                }}
+              >
+                <img
+                  src={iconAI}
+                  alt="ai"
+                  className="w-6 h-6 absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
+                />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setShowDropdown(true)}
+                  onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+                  className="w-full px-[40px] py-2 rounded-full text-black border-0 outline-none"
+                  style={{
+                    background: "#F2F3FF",
+                    borderRadius: "99px",
+                  }}
+                  placeholder="ค้นหาสินค้า..."
+                />
+                <span className="absolute right-[50px] top-1/2 transform -translate-y-1/2 text-[#868CFF]">AI Search </span>
+                <button className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10">
+                  <img src={searchBlue} alt="search" className="w-6 h-6" />
+                </button>
+              </div>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             <div className="relative">
-              <Heart className="w-6 h-6 text-white" />
-              <span className="absolute top-2 -right-1 bg-orange-500 text-white text-[10px] rounded-full w-5 h-4 flex items-center justify-center">3+</span>
+              <img src={heart} alt="heart" className="w-10 h-10" />
+              <span className="absolute top-5 -right-2 bg-[#FDAF17] text-white text-[10px] rounded-full px-[5px] flex items-center justify-center">
+                99+
+              </span>
             </div>
             <div className="relative">
-              <ShoppingCart className="w-6 h-6 text-white" />
-              <span className="absolute top-2 -right-1 bg-orange-500 text-white text-[10px] rounded-full w-5 h-4 flex items-center justify-center">5+</span>
+              <img src={shoppingCart} alt="cart" className="w-10 h-10" />
+              <span className="absolute top-5 -right-2 bg-[#FDAF17] text-white text-[10px] rounded-full px-[5px] flex items-center justify-center">
+                99+
+              </span>
             </div>
-            <CircleUserRound className="w-6 h-6 text-white" />
+            <img src={profile} alt="profile" className="w-8 h-8" />
 
             {/* <Search className="w-6 h-6 text-white" /> */}
           </div>
@@ -160,7 +219,7 @@ export default function App() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="bg-white rounded-lg shadow-lg p-6 mb-6 relative z-10 max-h-[700px] overflow-y-auto"
+                className="bg-white rounded-[16px] shadow-lg p-6 mb-6 relative z-10 max-h-[700px] overflow-y-auto"
               >
                 <div className="">
                   {searchSuggestions.map((suggestion, index) => (
@@ -169,47 +228,57 @@ export default function App() {
                       whileHover={{ backgroundColor: "#f3f4f6" }}
                       className="flex items-center space-x-3 p-2 rounded cursor-pointer"
                     >
-                      <Search className="w-4 h-4 text-gray-500" />
-                      <div className="flex gap-1 font-semibold flex-1">
-                        <span className="text-[#4437C5]">Notebook</span>
-                        <span className="text-gray-700">{suggestion}</span>
+                      {/* <Search className="w-4 h-4 text-gray-500" /> */}
+                      <img
+                        src={searchGray}
+                        alt="JBL Logo"
+                        className="w-4 h-4"
+                      />
+                      <div className="flex gap-1 flex-1 font-[600] text-[14px]">
+                        <span className="text-[#291ABD] ">Notebook</span>
+                        <span className="text-[#646464]">{suggestion}</span>
                       </div>
-                      <ArrowUpLeft className="w-4 h-4 text-gray-500 ml-auto" />
+                      <ArrowUpLeft className="w-4 h-4 text-[#A3A3A3] ml-auto" />
                     </motion.div>
                   ))}
                 </div>
 
                 <div className="mt-6">
-                  <div className="text-sm font-semibold text-gray-600 mb-3">
+                  <div className="text-[16px] font-semibold text-[#4E4E4E] mb-3">
                     หมวดหมู่
                   </div>
                   <div className="flex flex-col">
                     <div className="flex items-center space-x-3 p-2 rounded cursor-pointer">
-                    <Monitor className="w-4 h-4 text-[#4437C5]" />
-                      <div className="flex gap-1 font-semibold  ">
-                        <span className="text-[#4437C5]">Notebook</span>
-                        <span className="text-gray-700">ทั้งหมด</span>
+                      <img src={monitor} alt="JBL Logo" className="w-5 h-5" />
+                      {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
+                      <div className="flex gap-1 font-semibold text-[14px] ">
+                        <span className="text-[#291ABD]">Notebook</span>
+                        <span className="text-[#646464]">สำหรับเล่นเกม</span>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 px-2 py-1 rounded cursor-pointer">
-                    <Monitor className="w-4 h-4 text-[#4437C5]" />
-                      <div className="flex gap-1 font-semibold  ">
-                        <span className="text-[#4437C5]">Notebook</span>
-                        <span className="text-gray-700">ทั้งหมด</span>
+                      <img src={monitor} alt="JBL Logo" className="w-5 h-5" />
+                      {/* <monitor className="w-4 h-4 text-[#4437C5]" /> */}
+                      <div className="flex gap-1 font-semibold  text-[14px]">
+                        <span className="text-[#291ABD]">Notebook</span>
+                        <span className="text-[#646464]">สำหรับทำงาน</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <div className="text-sm text-gray-600 mb-3">
-                    สินค้า (33 รายการ)
+                  <div className="text-[16px] flex gap-1 mb-3 items-center">
+                    <span className="font-semibold text-[#4E4E4E]">สินค้า</span>
+                    <span className="text-[#A3A3A3] text-[14px]">
+                      (32 รายการ)
+                    </span>
                   </div>
                   <div className="flex space-x-2">
-                    <span className="bg-[#1B135C] text-white px-3 py-1 rounded-full text-sm w-[100px] text-center">
+                    <span className="bg-[#221690] text-white px-3 py-1 rounded-full text-[12px] w-[80px] text-center">
                       คุ้มที่สุด
                     </span>
-                    <span className="bg-blue-100 text-[#1B135C] px-3 py-1 rounded-full text-sm w-[100px] text-center">
+                    <span className="bg-[#F4F6F8] text-[#221690] px-3 py-1 rounded-full text-[12px] w-[80px] text-center">
                       เป็นที่นิยม
                     </span>
                   </div>
@@ -228,26 +297,35 @@ export default function App() {
                         whileHover={{ scale: 1.05 }}
                         className="bg-white border rounded-lg p-3 cursor-pointer relative flex-shrink-0 w-48"
                       >
-                        {product.badge && (
+                        {/* {product.badge && (
                           <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
                             {product.badge}
                           </span>
-                        )}
-                        <div className="rounded-lg p-4 mb-3">
+                        )} */}
+                        <img
+                          src={badgeAsus}
+                          alt="badge"
+                          className="absolute top-2 right-2 w-auto h-2"
+                        />
+                        <div className="rounded-lg  mb-3">
                           <img
                             src={noteBook}
                             alt={product.name}
-                            className="w-full h-20 object-contain"
+                            className="w-full h-25 object-contain"
                           />
                         </div>
-                        <div className="text-xs text-blue-600 font-semibold mb-1">
-                          NOTEBOOK
+                        <div className=" mb-2 text-[12px] font-semibold">
+                          <span className="text-[#291ABD] ">NOTEBOOK</span>{" "}
+                          <span className="text-[#646464]">{product.name}</span>
                         </div>
-                        <div className="text-xs text-gray-600 mb-2 line-clamp-2">
+                        {/* <div className="text-xs text-gray-600 mb-2">
                           {product.name}
-                        </div>
-                        <div className="text-sm font-bold text-gray-900">
-                          {product.price}
+                        </div> */}
+                        <div className="flex justify-between items-end font-semibold">
+                          <img src={discount} alt="discount" className="" />
+                          <span className="text-[#454545] text-[16px]">
+                            {product.price}
+                          </span>
                         </div>
                       </motion.div>
                     ))}
@@ -256,8 +334,10 @@ export default function App() {
 
                 {/* Brands */}
                 <div className="mt-6">
-                  <div className="text-sm text-gray-600 mb-3">แบรนด์</div>
-                  <div className="flex space-x-8 items-center">
+                  <div className="text-[16px] font-semibold text-[#4E4E4E] mb-3">
+                    แบรนด์
+                  </div>
+                  <div className="flex items-center">
                     {brands.map((brand, index) => (
                       <motion.img
                         key={index}
@@ -271,14 +351,37 @@ export default function App() {
                 </div>
 
                 <div className="mt-4">
-                  <div className="text-sm text-gray-600 mb-2">
-                    ผู้ผลิตสินค้า
+                  <div className="text-[16px] font-semibold text-[#4E4E4E] mb-2 flex gap-2 items-center">
+                    สเปคสินค้า
+                    <img src={iconAI} alt="ai" className="w-5 h-5" />
                   </div>
-                  <div className="flex items-center space-x-2">
-                  <Search className="w-4 h-4 text-gray-500" />
-                    <span className="text-sm text-gray-600">
-                      Notebook CPU INTEL
-                    </span>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src={searchGray}
+                        alt="JBL Logo"
+                        className="w-4 h-4"
+                      />
+                      <div className="flex gap-1 flex-1 font-[600] text-[14px]">
+                        <span className="text-[#291ABD] ">Notebook</span>
+                        <span className="text-[#646464] uppercase">
+                          CPU Intel
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src={searchGray}
+                        alt="JBL Logo"
+                        className="w-4 h-4"
+                      />
+                      <div className="flex gap-1 flex-1 font-[600] text-[14px]">
+                        <span className="text-[#291ABD] ">Notebook</span>
+                        <span className="text-[#646464] uppercase">
+                          CPU AMD
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
