@@ -130,7 +130,7 @@ const brands = [
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("Notebook โน๊ตบุ๊ค เกมมิ่ง");
-  const [showDropdown, setShowDropdown] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -163,7 +163,7 @@ export default function App() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setShowDropdown(true)}
-                  onBlur={() => setTimeout(() => setShowDropdown(true), 200)}
+                  onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
                   className="w-full px-[40px] py-2 rounded-full text-black border-0 outline-none"
                   style={{
                     background: '#F2F3FF',
@@ -207,7 +207,7 @@ export default function App() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="bg-white rounded-lg shadow-lg p-6 mb-6 relative z-10 max-h-[700px] overflow-y-auto"
+                className="bg-white rounded-[16px] shadow-lg p-6 mb-6 relative z-10 max-h-[700px] overflow-y-auto"
               >
                 <div className="">
                   {searchSuggestions.map((suggestion, index) => (

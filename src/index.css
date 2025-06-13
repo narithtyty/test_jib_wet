@@ -10,20 +10,30 @@
 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px; /* Scrollbar width */
   height: 8px; /* Height of the scrollbar for horizontal scroll */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Keep track subtly visible */
+  background: transparent; /* Make track transparent to blend with content */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent; /* Make thumb transparent by default */
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent thumb that overlays content */
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for visibility */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888; /* Show thumb with a visible color on hover */
+  background: rgba(0, 0, 0, 0.3); /* More visible on hover */
+}
+
+/* Make sure scrollbar appears over content */
+html {
+  overflow-y: overlay; /* Use overlay scrolling where supported */
+}
+
+body {
+  scrollbar-gutter: stable; /* Prevent layout shift when scrollbar appears */
 }
