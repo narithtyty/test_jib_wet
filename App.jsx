@@ -148,7 +148,7 @@ export default function App() {
           className="w-10 h-10 absolute left-4 top-[25px]"
         />
 
-        <div className="flex items-center justify-between max-w-7xl mx-auto gap-6 ">
+        <div className="flex items-center justify-between max-w-6xl mx-auto gap-6 ">
           <div className="flex items-center space-x-4 w-full">
             <div className="text-2xl font-bold">
               <img src={jibLogo} alt="JBL Logo" className="w-15 h-14" />
